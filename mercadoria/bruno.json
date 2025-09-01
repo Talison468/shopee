@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "mercadoria",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
