@@ -1,16 +1,13 @@
 package com.mercadoria.shopee.entity;
 
 import jakarta.persistence.*;
-
-import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "mercadoria")
 public class Mercadoria {
     @Id
-    @GeneratedValue(strategy =
-            GenerationType.AUTO,generator="UUID")
+    @GeneratedValue(strategy = GenerationType.AUTO,generator="UUID")
     @Column(nullable = false, updatable = false)
     private UUID id;
     @Column(nullable = false)
@@ -25,6 +22,10 @@ public class Mercadoria {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categorias;
+
+    @ManyToOne
+    @JoinColumn(name = "fornecedor_id")
+    private Fornecedor fornecedores;
 
     public Mercadoria() { }
 
