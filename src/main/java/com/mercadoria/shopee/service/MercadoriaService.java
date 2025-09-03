@@ -46,16 +46,17 @@ public class MercadoriaService {
         MercadoriaCreateDTO mercadoriaCreateDTO = new MercadoriaCreateDTO();
         mercadoriaCreateDTO.setNome(mercadoria.getNome());
         mercadoriaCreateDTO.setPreco(mercadoria.getPreco());
-        mercadoriaCreateDTO.setCategoria(mercadoria.getCategoria());
         mercadoriaCreateDTO.setQuantidade(mercadoria.getQuantidade());
+        mercadoriaCreateDTO.setCategoria(mercadoria.getCategorias());
+
         return mercadoriaCreateDTO;
     }
     public Mercadoria convertToEntity (MercadoriaCreateDTO mercadoriaCreateDTO) {
         Mercadoria mercadoria = new Mercadoria();
         mercadoria.setNome(mercadoriaCreateDTO.getNome());
         mercadoria.setPreco(mercadoriaCreateDTO.getPreco());
-        mercadoria.setCategoria(mercadoriaCreateDTO.getCategoria());
         mercadoria.setQuantidade(mercadoriaCreateDTO.getQuantidade());
+        mercadoria.setCategorias(mercadoriaCreateDTO.getCategoria());
         return mercadoria;
     }
 }

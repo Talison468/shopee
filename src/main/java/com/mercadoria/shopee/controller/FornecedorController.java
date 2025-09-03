@@ -1,6 +1,6 @@
 package com.mercadoria.shopee.controller;
-
-import com.mercadoria.shopee.entity.Fornecedor;
+import com.mercadoria.shopee.DTO.FornecedorCreateDTO;
+import com.mercadoria.shopee.service.FornecedorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,8 +1,9 @@
 package com.mercadoria.shopee.controller;
 
+import com.mercadoria.shopee.DTO.CategoriaCreateDTO;
 import com.mercadoria.shopee.DTO.FornecedorCreateDTO;
 import com.mercadoria.shopee.entity.Categoria;
-import com.mercadoria.shopee.entity.Fornecedor;
+import com.mercadoria.shopee.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class CategoriaController {
     public CategoriaCreateDTO findById(@PathVariable("id") UUID id) {return service.findById(id);}
 
     @GetMapping
-    public List<FornecedorCreateDTO> findAll(){return service.findAll();}
+    public List<CategoriaCreateDTO> findAll(){return service.findAll();}
 
     @PostMapping
     public CategoriaCreateDTO save(

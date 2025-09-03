@@ -16,8 +16,7 @@ public class Mercadoria {
     private double preco;
     @Column(nullable = false)
     private int quantidade;
-    @Column(nullable = false)
-    private String categoria;
+
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")
@@ -29,14 +28,30 @@ public class Mercadoria {
 
     public Mercadoria() { }
 
-    public Mercadoria(UUID id, String nome, double preco, int quantidade, String categoria) {
+    public Mercadoria(UUID id, String nome, double preco, int quantidade, Categoria categorias, Fornecedor fornecedores) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
-        this.categoria = categoria;
+        this.categorias = categorias;
+        this.fornecedores = fornecedores;
     }
 
+    public Categoria getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(Categoria categorias) {
+        this.categorias = categorias;
+    }
+
+    public Fornecedor getFornecedores() {
+        return fornecedores;
+    }
+
+    public void setFornecedores(Fornecedor fornecedores) {
+        this.fornecedores = fornecedores;
+    }
     public UUID getId() {
         return id;
     }
@@ -67,13 +82,5 @@ public class Mercadoria {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
     }
 }
