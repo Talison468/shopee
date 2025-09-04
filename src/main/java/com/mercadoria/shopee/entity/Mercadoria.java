@@ -7,7 +7,7 @@ import java.util.UUID;
 @Table(name = "mercadoria")
 public class Mercadoria {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")
     @Column(nullable = false, updatable = false)
     private UUID id;
     @Column(nullable = false)
