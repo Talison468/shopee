@@ -1,8 +1,6 @@
 package com.mercadoria.shopee.controller;
 
 import com.mercadoria.shopee.DTO.CategoriaCreateDTO;
-import com.mercadoria.shopee.DTO.FornecedorCreateDTO;
-import com.mercadoria.shopee.entity.Categoria;
 import com.mercadoria.shopee.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
