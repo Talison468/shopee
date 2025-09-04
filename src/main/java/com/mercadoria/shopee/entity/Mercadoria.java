@@ -52,6 +52,7 @@ public class Mercadoria {
     public void setFornecedores(Fornecedor fornecedores) {
         this.fornecedores = fornecedores;
     }
+
     public UUID getId() {
         return id;
     }

@@ -20,7 +20,7 @@ public class Fornecedor {
     private String endereco;
 
     @OneToMany(mappedBy = "fornecedores")
-    private List<Fornecedor> fornecedores;
+    private List<Mercadoria> mercadorias;
 
     public Fornecedor() {}
 
