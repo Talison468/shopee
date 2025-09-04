@@ -20,10 +20,11 @@ public class Categoria {
 
     public Categoria() {  }
 
-    public Categoria(String descricao, String nome, UUID id) {
-        this.descricao = descricao;
-        this.nome = nome;
+    public Categoria(UUID id, String nome, String descricao, List<Mercadoria> mercadorias) {
         this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.mercadorias = mercadorias;
     }
 
     public UUID getId() {
@@ -48,5 +49,13 @@ public class Categoria {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public List<Mercadoria> getMercadorias() {
+        return mercadorias;
+    }
+
+    public void setMercadorias(List<Mercadoria> mercadorias) {
+        this.mercadorias = mercadorias;
     }
 }
