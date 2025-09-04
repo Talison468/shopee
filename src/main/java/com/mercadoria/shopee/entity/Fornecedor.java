@@ -24,11 +24,12 @@ public class Fornecedor {
 
     public Fornecedor() {}
 
-    public Fornecedor(UUID id, String nome, String contato, String endereco) {
+    public Fornecedor(UUID id, String nome, String contato, String endereco, List<Mercadoria> mercadorias) {
         this.id = id;
         this.nome = nome;
         this.contato = contato;
         this.endereco = endereco;
+        this.mercadorias = mercadorias;
     }
 
     public UUID getId() {
@@ -61,5 +62,13 @@ public class Fornecedor {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public List<Mercadoria> getMercadorias() {
+        return mercadorias;
+    }
+
+    public void setMercadorias(List<Mercadoria> mercadorias) {
+        this.mercadorias = mercadorias;
     }
 }
