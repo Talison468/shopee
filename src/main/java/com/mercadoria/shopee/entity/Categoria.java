@@ -7,7 +7,7 @@ import java.util.UUID;
 @Entity
 public class Categoria {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "UUID")
     @Column(nullable = false, updatable = false)
     private UUID id;
     @Column(nullable = false)
