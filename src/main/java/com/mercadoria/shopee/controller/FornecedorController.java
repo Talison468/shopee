@@ -11,7 +11,7 @@ import java.util.UUID;
 @RequestMapping("/api/v1/fornecedor")
 public class FornecedorController {
     @Autowired
-    FornecedorService service;
+    private FornecedorService service;
     @GetMapping("/{id}")
     public FornecedorCreateDTO findById(@PathVariable("id") UUID id) {return service.findById(id);}
 
